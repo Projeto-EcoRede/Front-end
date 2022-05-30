@@ -2,15 +2,26 @@
     cursor: pointer;
     color: white;
 }
+
 .text-decoration-none{
-    text-decoration: none;
+    text-decoration: none !important;
+    color: white !important; 
 }
 
 .botao2{
-    color: white;
+    color: white !important;
 }
-.MuiAppBar-colorPrimary{
+
+.MuiAppBar-colorPrimary {
     /* background-image: linear-gradient(to right, #86eae3, grey); */
-    background-color: #386641!important;
+    background-color: #386641 !important;
 
     }
+.barra{
+    color: white !important;
+    text-decoration: none !important; 
+}
+.links{
+    text-decoration: none;
+    color: white;
+}

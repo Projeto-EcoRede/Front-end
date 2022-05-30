@@ -18,7 +18,7 @@ function Footer() {
                             <a href="https://www.instagram.com/generationbrasil/" target="_blank">
                             <img className='redes' src="https://i.imgur.com/rQIBjvN.png" alt="Logo Instagram" />
                             </a>
-                            <a href="mailto:contact@domain.com?"  target="_blank">
+                            <a href="mailto:projetoecorede@gmail.com"  target="_blank">
                             <img className='redes' src="https://i.imgur.com/61MhAFN.png" alt="Logo Email" />
                             </a> 
                         </Box>
