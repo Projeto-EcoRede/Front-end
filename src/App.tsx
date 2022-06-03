@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/estaticos/navbar/Navbar'
-import Footer from './components/estaticos/footer/Footer'
-import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario'
-import Home from './pages/home/Home'
-import Login from './pages/login/Login';
-import Sobre from './pages/sobre/Sobre'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/estaticos/navbar/Navbar';
+import Footer from './components/estaticos/footer/Footer';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+import Home from './paginas/home/Home';
+import Login from './paginas/login/Login';
+import Sobre from './paginas/sobre/Sobre';
 import './App.css';
 
 function App() {

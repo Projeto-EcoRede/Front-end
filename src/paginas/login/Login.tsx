@@ -1,9 +1,48 @@
-import React from 'react';
-import { Grid, Box, Typography, TextField, Button  } from '@mui/material';
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect, ChangeEvent } from 'react';
+import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { api } from '../../services/Service';
+import UserLogin from '../../models/UserLogin';
 import './Login.css';
 
-function Login(){
+function Login() {
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    const [userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            usuario: '',
+            senha: '',
+            token: ''
+        }
+        )
+
+        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
+            setUserLogin({
+                ...userLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+
+            useEffect(()=>{
+                if(token != ''){
+                    navigate('/home')
+                }
+            }, [token])
+
+        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+            e.preventDefault();
+            try{
+                const resposta = await api.post(`/usuarios/logar`, userLogin)
+                setToken(resposta.data.token)
+
+                alert('Usuário logado com sucesso!');
+            }catch(error){
+                alert('Dados do usuário inconsistentes. Erro ao logar!');
+            }
+        }
     
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -37,4 +76,4 @@ function Login(){
     )
 }
 
-export default Login;
+export default Login
