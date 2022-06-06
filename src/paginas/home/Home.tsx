@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import {Typography, Box, Grid, Button} from '@material-ui/core';
+import { useNavigate } from 'react-router';
+import useLocalStorage from 'react-use-localstorage';
+
+
 import './Home.css';
 
 function Home() {
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    
+    useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          navigate("/login")
+  
+      }
+  }, [token])
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
