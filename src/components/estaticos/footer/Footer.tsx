@@ -1,10 +1,21 @@
-import React from 'react';
-import {Typography, Box, Grid } from '@mui/material';
-import './Footer.css'
+import React from "react";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import EmailIcon from "@material-ui/icons/Email";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import { Typography, Box, Grid } from "@mui/material";
+import "./Footer.css";
+import GitHub from "@material-ui/icons/GitHub";
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/token/tokensReducer';
 
 function Footer() {
-    return (
-        <>
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens);
+        
+        var footerComponent;
+        if(token !== ""){
+            footerComponent=
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
                     <Box className='box1'>
@@ -33,8 +44,11 @@ function Footer() {
                     </Box>
                 </Grid>
             </Grid>
+        }
+    return (
+        <>
+        {footerComponent}
         </>
     )
-}
-
+    }
 export default Footer;
