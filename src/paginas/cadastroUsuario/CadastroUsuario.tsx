@@ -5,6 +5,7 @@ import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 
 function CadastroUsuario() {
@@ -14,19 +15,20 @@ function CadastroUsuario() {
     const [user, setUser] = useState<User>(
         {
             id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: 'https://i.imgur.com/fblXOsN.png',
-        })
+            nome: "",
+            usuario: "",
+            senha: "",
+            foto: ""
+        }
+    )
 
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
+            nome: "",
+            usuario: "",
+            senha: "",
+            foto: ""
         })
 
     useEffect(() => {
@@ -35,33 +37,46 @@ function CadastroUsuario() {
         }
     }, [userResult])
 
-
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
 
-
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-
         setUser({
             ...user,
             [e.target.name]: e.target.value
         })
-
     }
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-        e.preventDefault()
-        console.log(user)
+        e.preventDefault();
         if (confirmarSenha === user.senha && user.senha.length >= 8) {
-
             await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            alert("Usuário cadastrado com sucesso")
 
+            toast.success("Usuário cadastrado com sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
-
         else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error("Senha deve ter 8 caracteres. Favor verificar as informações de cadastro.", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
+
     }
 
 

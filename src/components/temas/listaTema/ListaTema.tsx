@@ -1,47 +1,60 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import Tema from '../../../models/Tema';
 import './ListaTema.css';
-import useLocalStorage from 'react-use-localstorage';
-import { useNavigate } from 'react-router-dom';
+import Tema from '../../../models/Tema';
 import { busca } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/token/tokensReducer';
+import { toast } from 'react-toastify';
 
 function ListaTema() {
-    const [temas, setTemas] = useState<Tema[]>([])
-    const [token, setToken] = useLocalStorage('token');
-    let navigate = useNavigate();
+    const [tema, setTema] = useState<Tema[]>([])
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    let history = useNavigate();
 
     useEffect(() => {
-        if (token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
+        if (token == "") {
+            toast.error("Você precisa está logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            history("/login")
         }
     }, [token])
 
-
     async function getTema() {
-        await busca("/tema", setTemas, {
+        await busca("/tema", setTema, {
             headers: {
-                'Authorization': token
-            }
+                "Authorization": token
+            }  
         })
     }
 
-
     useEffect(() => {
         getTema()
-    }, [temas.length])
+    }, [tema.length])
 
     return (
         <>
             {
-                temas.map(tema => (
+                tema.map(tema => (
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
                                     Tema
+                                </Typography>
+                                <Typography variant="h5" component="h2">
+                                    {tema.topico}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                     {tema.descricao}
