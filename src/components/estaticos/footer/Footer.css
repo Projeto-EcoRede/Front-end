@@ -1,17 +1,15 @@
 .box1{
-    background-color: #6a994e ;
-    height: 120px;
-
+    height: 60px;
+    width: 100px;
+    margin: 60px;
+    background-color: #08d15ced !important;
 }
+
 .box2{
-    background-color: #386641;    
+    background-color: #08d15ced !important;   
     height: 60px;
 
 }
 .textos{
-    color: white !important;
-}
-.redes{
-    height: 60px;
-    margin: 0 5px;
+    color: rgb(31, 29, 29) !important;
 }

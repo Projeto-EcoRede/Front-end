@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
 .cursor{
     cursor: pointer;
-    color: white;
+    color: rgb(36, 33, 33);
 }
 
 .text-decoration-none{
@@ -9,16 +11,20 @@
 }
 
 .botao2{
-    color: white !important;
+    color: rgb(51, 27, 27)!important;
 }
 
-.MuiAppBar-colorPrimary {
-    /* background-image: linear-gradient(to right, #86eae3, grey); */
-    background-color: #386641 !important;
 
+.navbar{
+    background-color: #08d15ced !important;
     }
+
+.navbarfont{
+    font-family: 'Amatic SC', cursive !important;
+}
+
 .barra{
-    color: white !important;
+    color: rgb(27, 22, 22) !important;
     text-decoration: none !important; 
 }
 .links{
