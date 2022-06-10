@@ -31,15 +31,15 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className='navbar'>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
-            BlogPessoal
+            Projeto Eco Rede
           </IconButton>
           <Box display="flex" justifyContent="start">
             <Link to='/home' className='text-decoration-none'>
             <Box mx={1} className='cursor'>
-              <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
                   Home
           </Typography>
               </Box>
@@ -60,14 +60,16 @@ export default function ButtonAppBar() {
               Cadastrar Temas
           </Typography>
               </Box>
+              <Link to='/sobre' className='text-decoration-none'>
               <Box mx={1} className='cursor'>
               <Typography variant="h6" className={classes.title}>
               Sobre Nós
           </Typography>
               </Box>
+              </Link>
           </Box>
           <Link to='/login' className='text-decoration-none cursor'>
-          <Button color='inherit'>Loggout</Button>
+          <Button className='botao2' color='inherit'>Logout</Button>
           </Link>
         </Toolbar>
       </AppBar>
