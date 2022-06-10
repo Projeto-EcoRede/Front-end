@@ -1,21 +1,35 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Typography, Box, Grid, Button } from "@material-ui/core";
-import { useNavigate } from "react-router";
-import useLocalStorage from "react-use-localstorage";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'
+import {Typography, Box, Grid, Button} from '@material-ui/core';
+import { useNavigate } from 'react-router';
 
-import "./Home.css";
+import './Home.css';
+import { toast } from 'react-toastify';
+import { TokenState } from '../../store/token/tokensReducer';
+import { useSelector } from 'react-redux';
 
 function Home() {
   let navigate = useNavigate();
-  const [token, setToken] = useLocalStorage("token");
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
-  useEffect(() => {
-    if (token == "") {
-      alert("Você precisa estar logado");
-      navigate("/login");
-    }
-  }, [token]);
+    useEffect(() => {
+        if (token == "") {
+            toast.error("Você precisa está logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            navigate("/login")
+
+        }
+    }, [token])
 
   return (
     <>
