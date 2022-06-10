@@ -8,14 +8,11 @@
 .logo{
     background-image: url(https://i.imgur.com/H7kuRU8.png);
     background-repeat: no-repeat;
-    width: 500px;
-    min-height: 500px;
+    width: 400px;
+    min-height: 400px;
     display: block;
     justify-content: center;
     align-items: center;
     margin: auto;
     background-size: cover;
-}
-.textsobre{
-    
 }

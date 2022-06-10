@@ -1,8 +1,34 @@
-import React from 'react';
-import {Typography, Box, Grid, Button} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
+import {Typography, Box, Grid, Button} from '@material-ui/core';
 import './Home.css';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/token/tokensReducer';
+import {toast} from 'react-toastify'
 
 function Home() {
+    let history = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    useEffect(() => {
+        if (token == "") {
+          toast.error('Você precisa estar logado!', {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: "colored",
+              progress: "undefined"
+            })
+            history("/login")
+    
+        }
+    }, [token])
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
@@ -13,8 +39,11 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem />
                         </Box>
+                        <Link to='/postagem'>
                         <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
@@ -23,7 +52,8 @@ function Home() {
 
                     
                 </Grid>
-                <Grid xs={12} className='postagens'>
+                <Grid xs={12}>
+                    <TabPostagem />
                 </Grid>
             </Grid>
         </>

@@ -1,78 +1,84 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import { Box } from '@mui/material';
-import { Link } from 'react-router-dom'
+import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage';
+
 import './Navbar.css'
+function Navbar() {
+  const [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate();
 
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-    },
-  }),
-);
-
-export default function ButtonAppBar() {
-  const classes = useStyles();
-
+  function goLogout() {
+    setToken('')
+    alert("Usuário deslogado")
+    navigate('/login')
+  }
   return (
-    <div className={classes.root}>
+    <>
       <AppBar position="static">
-        <Toolbar className='navbar'>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-            Projeto Eco Rede
-          </IconButton>
+        <Toolbar variant="dense">
+          <Box className='cursor'>
+            <Typography variant="h5" color="inherit">
+              BlogPessoal
+            </Typography>
+          </Box>
+
           <Box display="flex" justifyContent="start">
-            <Link to='/home' className='text-decoration-none'>
-            <Box mx={1} className='cursor'>
-          <Typography variant="h6" className={classes.title}>
-                  Home
-          </Typography>
+            <Link to="/home" className="text-decorator-none">
+              <Box mx={1} className='cursor'>
+                <Typography variant="h6" color="inherit">
+                  home
+                </Typography>
               </Box>
             </Link>
-              
+            <Link to="/postagem" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-              <Typography variant="h6" className={classes.title}>
-              Postagens
-          </Typography>
+                <Typography variant="h6" color="inherit">
+                  postagens
+                </Typography>
               </Box>
+            </Link>
+            <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-              <Typography variant="h6" className={classes.title}>
-              Temas
-          </Typography>
+                <Typography variant="h6" color="inherit">
+                  temas
+                </Typography>
               </Box>
+            </Link>
+            <Link to="/formularioTema" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-              <Typography variant="h6" className={classes.title}>
-              Cadastrar Temas
-          </Typography>
+                <Typography variant="h6" color="inherit">
+                  cadastrar tema
+                </Typography>
               </Box>
-              <Link to='/sobre' className='text-decoration-none'>
+            </Link>
+            <Link to="/formularioPostagem" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-              <Typography variant="h6" className={classes.title}>
-              Sobre Nós
-          </Typography>
+                <Typography variant="h6" color="inherit">
+                  cadastrar postagem
+                </Typography>
               </Box>
-              </Link>
+            </Link>
+            <Link to="/sobre" className="text-decorator-none">
+              <Box mx={1} className='cursor'>
+                <Typography variant="h6" color="inherit">
+                  sobre
+                </Typography>
+              </Box>
+            </Link>
+            <Box mx={1} className='cursor' onClick={goLogout}>
+              <Typography variant="h6" color="inherit">
+                logout
+              </Typography>
+            </Box>
+
           </Box>
-          <Link to='/login' className='text-decoration-none cursor'>
-          <Button className='botao2' color='inherit'>Logout</Button>
-          </Link>
+
         </Toolbar>
       </AppBar>
-    </div>
-  );
+    </>
+  )
 }
+
+export default Navbar;
