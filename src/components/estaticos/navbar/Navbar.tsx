@@ -1,28 +1,69 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/token/tokensReducer';
+import { addToken } from '../../../store/token/action';
+import {toast} from 'react-toastify'
 
-import './Navbar.css'
 function Navbar() {
-  const [token, setToken] = useLocalStorage('token');
-  let navigate = useNavigate();
+
+  const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  })
+);
+
+  const classes = useStyles();
+  let history = useNavigate();
+  const dispatch = useDispatch();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens);
 
   function goLogout() {
-    setToken('')
-    alert("Usuário deslogado")
-    navigate('/login')
+    dispatch(addToken(''))
+    toast.info('Usuário deslogado!', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: "undefined"
+    })
+    history('/login')
   }
-  return (
-    <>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <Box className='cursor'>
-            <Typography variant="h5" color="inherit">
-              BlogPessoal
-            </Typography>
-          </Box>
+
+  var navbarComponent;
+
+  if(token !== ""){
+    navbarComponent = 
+    <div className={classes.root}>
+      <AppBar position="static" className="navbar">
+        <Toolbar className="navbarfont">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+          >
+            <MenuIcon />
+            Projeto Eco Rede
+          </IconButton>
 
           <Box display="flex" justifyContent="start">
             <Link to="/home" className="text-decorator-none">
@@ -63,7 +104,7 @@ function Navbar() {
             <Link to="/sobre" className="text-decorator-none">
               <Box mx={1} className='cursor'>
                 <Typography variant="h6" color="inherit">
-                  sobre
+                  sobre nós
                 </Typography>
               </Box>
             </Link>
@@ -77,8 +118,14 @@ function Navbar() {
 
         </Toolbar>
       </AppBar>
+      </div>
+      }
+
+
+  return (
+    <>
+    {navbarComponent} 
     </>
   )
 }
-
 export default Navbar;

@@ -1,8 +1,7 @@
 .btnModal{
-    border-color: white !important;
-    color: white !important;
-    font-weight: bold !important;
-    text-align: center;
-    align-items: center;
+    background-color: #08d15ced !important;   
+    color: rgb(23, 23, 23) !important;
+    text-decoration: none;
+
 
 }
