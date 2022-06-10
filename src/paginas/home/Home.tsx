@@ -67,7 +67,9 @@ function Home() {
             <Box marginRight={1}>
             <ModalPostagem/> 
             </Box>
+            <Link to='/postagem' className='text-decorator-none'>
             <Button className="botao">Ver Postagens</Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>
