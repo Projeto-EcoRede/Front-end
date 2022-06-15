@@ -44,10 +44,25 @@ function Sobre(){
                 </Box>
             <Box className='logo'></Box>
             </Grid>
-            <Grid>
-                <Box>
-
-                </Box>
+            <Grid className='gridTextoCont'>
+            <p className='textocontato'>
+                    Qualquer dúvida entre em contato conosco:
+                </p>
+                </Grid>
+            <Grid className="display">
+            
+            <Box display="flex" alignItems="center" justifyContent="center">
+               
+                            <a href="https://github.com/Projeto-EcoRede" target="_blank">
+                                <img className='redes' src="https://i.imgur.com/qQtYqr9.png?1" alt="Logo GitHub" />
+                            </a>
+                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                            <img className='redes' src="https://i.imgur.com/rQIBjvN.png" alt="Logo Instagram" />
+                            </a>
+                            <a href="mailto:projetoecorede@gmail.com"  target="_blank">
+                            <img className='redes' src="https://i.imgur.com/61MhAFN.png" alt="Logo Email" />
+                            </a> 
+                        </Box>
 
             </Grid>
         </Grid>
