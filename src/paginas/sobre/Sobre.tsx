@@ -49,7 +49,7 @@ function Sobre(){
                     Qualquer dúvida entre em contato conosco:
                 </p>
                 </Grid>
-            <Grid className="display2">
+            {/* <Grid className="display2">
             
             <Box display="flex" alignItems="center" justifyContent="center">
                
@@ -64,7 +64,7 @@ function Sobre(){
                             </a> 
                         </Box>
 
-            </Grid>
+            </Grid> */}
         </Grid>
 
         )
