@@ -25,7 +25,7 @@ function TabPostagem() {
                     </Box>
                 </TabPanel>
                 <TabPanel value="2">
-                    <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
+                    <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre nós</Typography>
                     <Typography variant="body1" gutterBottom color="textPrimary" align="justify"> Uma rede social, voltada para as questões ambientais, que inicialmente foi pensada para Capital e algumas regiões próximas da Grande SP.
                         Nesta rede social, o usuário poderá compartilhar conteúdos, como: indicações de serviços que possam ajudar, pedidos de ajuda, denúncias.</Typography>
                 </TabPanel>

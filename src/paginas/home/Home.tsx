@@ -63,7 +63,7 @@ function Home() {
               align="center"
               className="titulo"
             >
-              Pensamentos e opniões sempre com respeito!
+              Pensamentos e opiniões sempre com respeito!
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center"  className="bnthome">
