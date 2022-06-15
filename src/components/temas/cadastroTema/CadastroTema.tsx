@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid } from "@material-ui/core"
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import "./CadastroTema.css";
@@ -107,16 +107,19 @@ function CadastroTema() {
     }
   
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
+        <Grid className="topo">
+<Container maxWidth="sm" >
+            <form onSubmit={onSubmit} className='formTema'>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.topico} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="topico" label="topico" variant="outlined" name="topico" margin="normal" fullWidth />
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
+                <TextField value={tema.topico} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="topico" label="topico"  name="topico" margin="normal" fullWidth />
+                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" name="descricao" margin="normal" fullWidth />
+                <Button type="submit" variant="contained" className='finalizaTema'>
                     Finalizar
                 </Button>
             </form>
         </Container>
+        
+        </Grid>
     )
 }
 

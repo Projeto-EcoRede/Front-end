@@ -1,33 +1,48 @@
 .caixa{
-    background-color: #b9f1b3;
+    background-image: url(https://i.imgur.com/2m766lw.jpg);
+    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 70vh;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+
+
 }
 
 .titulo{
-    color: rgb(23, 23, 23) !important;
+    color: #fff !important;
    font-weight: bold !important;
-}
+   margin-bottom: 10px;
 
-.botao{
-    background-color: #08d15ced !important;   
-    color: rgb(23, 23, 23) !important;
-    text-decoration: none;
-    border-style: solid !important;
-    text-decoration: none !important;
 
 
 }
+.bnthome{
+    padding: 20px;
+}
 
-.postagens{
-    background-color: #23e90d34;
+.btnpostagem{
+   
+    background-color: #3d8f03af !important;   
+    color: white !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+.btnpostagem:hover{
+    
+        font-weight: bold; 
+        box-shadow: inset 0 0 0 3em #3d8f03 !important;
+        padding: 10px 20px;
+        font-size: 15px;
 }
 .text-decorator-none{
     text-decoration: none !important;
 }
-.imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+.logooficial{
+    height: 150px;
+    width: 100%;
+    background-size: contain;
 }
+

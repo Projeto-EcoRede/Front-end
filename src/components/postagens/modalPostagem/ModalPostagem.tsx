@@ -61,7 +61,7 @@ function ModalPostagem() {
     );
 
     return (
-        <div>
+        <div  className="btnModalpadding">
             <Button
                 variant="outlined"
                 className="btnModal"

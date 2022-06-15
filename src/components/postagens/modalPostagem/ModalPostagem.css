@@ -1,7 +1,18 @@
 .btnModal{
-    background-color: #08d15ced !important;   
-    color: rgb(23, 23, 23) !important;
-    text-decoration: none;
-
+background-color: #3d8f03af !important;   
+color: white !important;
+font-weight: bold !important;
+border: 1px solid rgb(0, 0, 0) !important;
+padding: 6px;
+}
+.btnModal:hover{
+    font-weight: bold; 
+    box-shadow: inset 0 0 0 3em #3d8f03 !important;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+.MuiButton-outlined{
+    padding: 6px 15px !important;
+   
 
 }

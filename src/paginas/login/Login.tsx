@@ -5,7 +5,7 @@ import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { toast } from 'react-toastify';
-import { addToken } from '../../store/token/action';
+import { addToken, addId } from '../../store/token/action';
 import { useDispatch } from 'react-redux';
 
 function Login() {
@@ -13,9 +13,7 @@ function Login() {
 
     const dispatch = useDispatch();
 
-    const [token, setToken] = useState("");
-
-    dispatch(addToken(token))
+    const [token, setToken] = useState("");    
 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
@@ -25,6 +23,20 @@ function Login() {
             token: ""
         }
         )
+        // Crie mais um State para pegar os dados retornados a API
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+      id: 0,
+      usuario: '',
+      senha: '',
+      token: '',
+  })
+
+  useEffect(() => {
+      if (token !== "") {
+          dispatch(addToken(token))
+          history('/home')
+      }
+  }, [token])
 
         function updatedModel(e: ChangeEvent<HTMLInputElement>){
 
@@ -32,19 +44,25 @@ function Login() {
                 ...userLogin,
                 [e.target.name]: e.target.value
             })
-        }
-
-            useEffect(() =>{
-                if (token !== ""){
-                    dispatch(addToken(token));
-                    history("/home")
-                }
-            }, [token])
+          }
+          useEffect(() => {
+            if (respUserLogin.token !== "") {
+    
+                // Verifica os dados pelo console (Opcional)
+                console.log("Token: " + respUserLogin.token)
+                console.log("ID: " + respUserLogin.id)
+    
+                // Guarda as informações dentro do Redux (Store)
+                dispatch(addToken(respUserLogin.token))
+                dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
+                history('/home')
+            }
+        }, [respUserLogin.token])
 
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
             try{
-                await login(`/usuarios/logar`, userLogin, setToken)
+              await login(`/usuarios/logar`, userLogin, setRespUserLogin)
 
                 toast.success("Usuário logado com sucesso!", {
                     position: "top-right",
@@ -109,7 +127,7 @@ function Login() {
                     fullWidth
                   />
                   <Box marginTop={2} textAlign="center">
-                    <Button type="submit" variant="contained" className="botao2">
+                    <Button type="submit" variant="contained" className="botaolgn">
                       Logar
                     </Button>
                   </Box>
@@ -120,12 +138,12 @@ function Login() {
                       Não tem uma conta?
                     </Typography>
                   </Box>
-                  <Link to="/cadastrousuario">
+                  <Link to="/cadastrousuario" className="text-decorator-none">
                     <Typography
                       variant="subtitle1"
                       gutterBottom
                       align="center"
-                      className="textos1"
+                      className="cadastre"
                     >
                       Cadastre-se
                     </Typography>

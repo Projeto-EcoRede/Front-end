@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Box, Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Grid } from "@material-ui/core"
+import { Box, Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Grid, FormLabel, RadioGroup, FormControlLabel, Radio } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
 import Postagem from '../../../models/Postagem';
@@ -33,8 +33,8 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
-              history("/login")
+            });
+            history("/login")
         }
     }, [token])
     const [tema, setTema] = useState<Tema>({
@@ -49,7 +49,7 @@ function CadastroPostagem() {
         texto: '',
         midia: '',
         data: '',
-        regioes: '' , 
+        regioes: '',
         curtir: 0,
         tema: null
     })
@@ -111,7 +111,7 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
+            });
         } else {
 
             await post(`/postagem`, postagem, setPostagem, {
@@ -128,7 +128,7 @@ function CadastroPostagem() {
                 draggable: false,
                 theme: "colored",
                 progress: "undefined"
-              });
+            });
         }
         back()
     }
@@ -138,37 +138,40 @@ function CadastroPostagem() {
     }
 
     return (
+        <Grid className="body">        
         <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className='formpostagem'>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
 
                 <TextField
                     value={postagem.titulo}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="titulo" label="titulo" variant="outlined"
+                    id="titulo" label="titulo"
                     name="titulo" margin="normal" fullWidth
                 />
 
                 <TextField
                     value={postagem.texto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="texto" label="texto" name="texto" variant="outlined"
+                    id="texto" label="texto" name="texto"
                     margin="normal" fullWidth
                 />
                 <TextField
                     value={postagem.midia}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="midia" label="url midia" name="midia" variant="outlined"
-                    margin="normal" fullWidth/>
-                <TextField
-                    value={postagem.regioes}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="regioes" label="região" name="regioes" variant="outlined"
-                    margin="normal" fullWidth/>
-     
-
-
-                <FormControl>
+                    id="midia" label="url midia" name="midia"
+                    margin="normal" fullWidth />
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Regiões</FormLabel>
+                    <RadioGroup aria-label="gender" name="regioes" value={postagem.regioes} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}>
+                        <FormControlLabel value="Zona Norte" control={<Radio className='colorratio' />} label="Zona Norte" />
+                        <FormControlLabel value="Zona Leste" control={<Radio />} label="Zona Leste" />
+                        <FormControlLabel value="Zona Oeste" control={<Radio />} label="Zona Oeste" />
+                        <FormControlLabel value="Zona Sul" control={<Radio />} label="Zona Sul" />
+                        <FormControlLabel value="ABCD" control={<Radio />} label="ABCD" />
+                    </RadioGroup>
+                </FormControl>
+                <FormControl className='topicoTema'>
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
 
                     <Select
@@ -183,19 +186,20 @@ function CadastroPostagem() {
                     >
 
                         {
-                         temas.map(item => (
+                            temas.map(item => (
                                 <MenuItem value={item.id}>{item.topico}</MenuItem>
                             ))
                         }
 
                     </Select>
                     <FormHelperText>Escolha um topico para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" className='finalizaPost'>
                         Finalizar
                     </Button>
                 </FormControl>
             </form>
         </Container>
+        </Grid>
     )
 }
 

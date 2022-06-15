@@ -96,28 +96,27 @@ function DeletarPostagem() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant="outlined">
-                    <CardContent>
-                        <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a Postagem:
-                            </Typography>
-                            <Typography color="textSecondary">
+            <Box m={10} className='justifyDelPost'>
+                <Card variant="outlined" className='boxDelPost'>
+                    <CardContent >
+                        <Box >
+                            <Typography color="textPrimary" className='desejaDEL' gutterBottom>
+                                Deseja deletar a Postagem?                            </Typography>
+                            <Typography color="textPrimary">
                                 { postagem?.titulo }
                             </Typography>
                         </Box>
                     </CardContent>
 
                     <CardActions>
-                        <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+                        <Box display="flex" justifyContent="center" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                                <Button onClick={sim} variant="contained" className="delPostS" size='large' >
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" size='large' className="delPostN">
                                     Não
                                 </Button>
                             </Box>

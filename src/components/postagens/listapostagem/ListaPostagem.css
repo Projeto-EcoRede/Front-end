@@ -1,7 +1,76 @@
-.text-decorator-none{
+.text-decorator-none {
     text-decoration: none;
 }
 .img-postagem{
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 250px !important;
+    max-height: 250px !important;
+}
+
+.postagem {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.609) !important;
+    color: black;
+    border: 1px solid rgb(0, 0, 0) !important;
+    border-radius: 08px;
+
+}
+.MuiCardContent-root{
+    padding: 15px 50px !important;
+}
+.titulopost{
+    margin-bottom: 5px !important;
+    color: black !important;
+    font-size: 20px !important;
+}
+.MuiTypography-h5{   
+     margin-bottom: 5px !important;
+    }
+
+.MuiTypography-body2{
+    margin-bottom: 10px !important;
+}
+.btnDel{
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgba(255, 0, 0, 0.744) !important;
+    color: white !important;
+
+}
+.btnDel:hover{
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: red !important;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white !important;
+
+
+}
+
+
+.MuiCardActions-root {
+    justify-content: center !important;
+}
+
+.boxpostagem {
+    max-width: 600px;
+    max-height: 700px;
+    border-radius: 20px;
+}
+
+.btnpost {
+    background-color: #3d8f03af !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    padding: 6px;
+}
+
+.btnpost:hover {
+    font-weight: bold;
+    box-shadow: inset 0 0 0 3em #3d8f03 !important;
+    padding: 10px 20px;
+    font-size: 15px;
 }

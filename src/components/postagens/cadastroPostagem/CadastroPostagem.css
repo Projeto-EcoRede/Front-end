@@ -1,0 +1,39 @@
+body{
+    background-image: url(https://i.imgur.com/az2yOrQ.jpg);
+    background-repeat: no-repeat;
+    width: 100% !important;
+    background-size: cover;
+    background-position: center;
+}
+.formpostagem{
+    background-color: rgba(255, 255, 255, 0.595);
+    color: black;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    padding: 20px;
+    border-radius: 08px;
+    text-align: center;
+    margin-top: 80px;
+}
+.finalizaPost{
+    background-color: #3d8f03af !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    margin-top: 20px !important;
+
+}
+.finalizaPost:hover{
+    font-weight: bold; 
+    background-color: #3d8f03 !important;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+.MuiIconButton-label{
+    color: #3d8f03 !important;
+}
+.MuiIconButton-root{
+    color: #3d8f03 !important;
+
+}
+

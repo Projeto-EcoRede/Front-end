@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box, Grid } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
@@ -55,66 +55,65 @@ function Navbar() {
   if(token !== ""){
     navbarComponent = 
     <div className={classes.root}>
-      <AppBar position="static" className="navbar">
-        <Toolbar className="navbarfont">
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-            Projeto Eco Rede
-          </IconButton>
 
-          <Box display="flex" justifyContent="start">
-            <Link to="/home" className="text-decorator-none">
+      <AppBar position="static" >
+        <Toolbar className="navbar">
+        <Link to="/home" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  home
+              <Typography variant="h5" className="bold">
+                  Home
                 </Typography>
               </Box>
             </Link>
             <Link to="/postagem" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  postagens
+              <Typography variant="h5" className="bold">
+                  Postagens
                 </Typography>
               </Box>
             </Link>
             <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  temas
+              <Typography variant="h5" className="bold">
+                  Temas
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioTema" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  cadastrar tema
+              <Typography variant="h5" className="bold">
+                  Cadastrar Tema
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioPostagem" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  cadastrar postagem
+              <Typography variant="h5" className="bold">
+                  Cadastrar Postagem
                 </Typography>
               </Box>
             </Link>
             <Link to="/sobre" className="text-decorator-none">
               <Box mx={1} className='cursor'>
-                <Typography variant="h6" color="inherit">
-                  sobre nós
+              <Typography variant="h5" className="bold">
+                  Sobre Nós
+                </Typography>
+              </Box>
+            </Link>
+
+            <Link to="/feed" className="text-decorator-none">
+              <Box mx={1} className='cursor'>
+              <Typography variant="h5" className="bold">
+                 Feed
                 </Typography>
               </Box>
             </Link>
             <Box mx={1} className='cursor' onClick={goLogout}>
-              <Typography variant="h6" color="inherit">
-                logout
+            <Typography variant="h5" className="bold">
+              Logout
               </Typography>
             </Box>
 
-          </Box>
 
         </Toolbar>
       </AppBar>

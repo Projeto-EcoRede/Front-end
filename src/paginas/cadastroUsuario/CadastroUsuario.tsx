@@ -15,7 +15,7 @@ function CadastroUsuario() {
     nome: "",
     usuario: "",
     senha: "",
-    foto: "https://i.imgur.com/fblXOsN.png",
+    foto: "",
   });
 
   const [userResult, setUserResult] = useState<User>({
@@ -76,7 +76,6 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center" className="imagem2">
-      <Grid item xs={6} ></Grid>
       <Grid item xs={6} alignItems="center">
         <Box paddingX={10}>
           <form onSubmit={onSubmit} className='Formulario'>
@@ -86,7 +85,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               color="textPrimary"
               component="h3"
               align="center"
-              className="textos2"
+              className="textoscadastrar"
             >
               Cadastrar
             </Typography>
@@ -95,7 +94,6 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="nome"
               label="nome e sobrenome"
-              variant="outlined"
               name="nome"
               margin="normal"
               fullWidth
@@ -106,7 +104,6 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="usuario"
-              variant="outlined"
               name="usuario"
               margin="normal"
               fullWidth
@@ -117,18 +114,15 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.foto}
               id="foto"
               label="link da foto"
-              variant="outlined"
               name="foto"
               margin="normal"
               fullWidth
-              required
             />
             <TextField
               value={user.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
               label="senha"
-              variant="outlined"
               name="senha"
               margin="normal"
               type="password"
@@ -142,7 +136,6 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               }
               id="confirmarSenha"
               label="confirmarSenha"
-              variant="outlined"
               name="confirmarSenha"
               margin="normal"
               type="password"
@@ -159,7 +152,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                   Cancelar
                 </Button>
               </Link>
-              <Button type="submit" variant="contained" color="primary">
+              <Button type="submit" variant="contained" className='bntcadastraruser'>
                 Cadastrar
               </Button>
             </Box>

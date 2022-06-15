@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca, put } from '../../../services/Service'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
@@ -74,11 +74,12 @@ function ListaPostagem() {
     <>
       {
         postagens.map(postagem => (
-          <Box m={2} >
+          <Grid className='gridprinc'>
+            <Box m={2} className="boxpostagem" >
             <Card variant="outlined" className="postagem">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                    Postagens:
+                <Typography  className="titulopost">
+                    Post
                 </Typography>
                 <Typography variant="h5" component="h2">
                   {postagem.titulo}
@@ -92,7 +93,8 @@ function ListaPostagem() {
                 <Typography variant="body2" component="p">
                   {postagem.regioes}
                 </Typography>
-                Tema:
+                <Typography  className="titulopost">                Tema
+                </Typography>              
                 <Typography variant="body2" component="p">
                   {postagem.tema?.descricao}
                 </Typography>
@@ -102,26 +104,28 @@ function ListaPostagem() {
 
                   <Link to={`/formularioPostagem/${postagem.id}`} className="text-decorator-none" >
                     <Box mx={1} className='bntListPost' >
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="btnpost" size='small' color="primary" >
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${postagem.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small' className="btnDel">
                         deletar
                       </Button>
                     </Box>
                   </Link>
-                  <Box mx={1}>
+                  {/* <Box mx={1}>
                       <Button onClick={() => { curtidas(postagem.id) }} ><ThumbUpIcon color='primary'></ThumbUpIcon></Button>
                       <Typography style={{ color: 'black' }} align='center' variant="body2" component="p"> {postagem.curtir}</Typography>
-                    </Box>
+                    </Box> */}
                 </Box>
               </CardActions>
             </Card>
           </Box>
+          </Grid>
+          
         ))
       }
     </>

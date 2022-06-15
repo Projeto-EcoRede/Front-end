@@ -1,0 +1,45 @@
+.delTemaS{
+    background-color: #3d8f03af !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+.delTemaS:hover{
+    font-weight: bold; 
+    background-color: #3d8f03 !important;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white !important;
+
+}
+.delTemaN{
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgba(255, 0, 0, 0.744) !important;
+    color: white !important;
+
+}
+.delTemaN:hover{
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: red !important;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white !important;
+
+}
+.boxDelTema{
+    background-color: rgba(255, 255, 255, 0.595) !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    padding: 20px;
+    border-radius: 08px;
+    text-align: center;
+    max-width: 500px;
+}
+.desejaDEL{
+    font-weight: bold !important;
+}
+.justifyDelPost{
+    text-align: center;
+}

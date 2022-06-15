@@ -26,33 +26,32 @@ function Sobre(){
               progress: "undefined"
             })
             history("/login")
-    
+
         }
     }, [token])
-    
+
     return( 
-        <Grid xs={8} className='sobre'>
-            <Box>
-        <h1>
-        SOBRE NÓS
-        </h1>
 
-        <Grid xs={6} className='logo'></Grid>
-    
-        <p>
-       Uma rede social, voltada para as questões ambientais, que inicialmente foi pensada para Capital e algumas regiões próximas da Grande SP.
-Nesta rede social, o usuário poderá compartilhar conteúdos, como: indicações de serviços que possam ajudar, pedidos de ajuda, denúncias.
-        </p>
-    </Box>
-    <Box>
-        <p>Fale conosco</p>
-        <a href="mailto:projetoecorede@gmail.com"  target="_blank">Email</a>
-        
-    </Box>
 
+        <Grid container className='sobre body'>
+            <Grid>
+
+                <Box className='display' >
+
+                    <p className='textosobre'>Uma Rede Social desenvolvida por alunes da Generation Brasil, onde o foco é conectar e incentivar a interação entre as pessoas, abordando assuntos com a temática ecológica. 
+                    Aqui a intenção é promover, debater, e até denunciar sobre as mais variadas situações que encontramos em nossa comunidade.
+                    As pessoas terão acesso ao que sua região oferece, pois a nossa rede proporciona o espaço perfeito para conectar os moradores com os profissionais de reciclagem e de áreas correlatas. </p>
+                </Box>
+            <Box className='logo'></Box>
+            </Grid>
+            <Grid>
+                <Box>
+
+                </Box>
+
+            </Grid>
         </Grid>
 
-    
         )
 }
 

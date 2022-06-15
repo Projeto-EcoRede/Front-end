@@ -7,6 +7,7 @@ import './Home.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/token/tokensReducer';
 import {toast} from 'react-toastify'
+import Feed from '../feed/Feed';
 
 function Home() {
     
@@ -40,7 +41,41 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        <Grid alignItems="center" item xs={6}>
+        <Grid>
+        <img className='logooficial'  src="https://i.imgur.com/VImomhY.png?1" alt="" />
+
+        <Box >
+            <Typography
+              variant="h3"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              className="titulo"
+            >
+              Bem vindes!
+            </Typography>
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h2"
+              align="center"
+              className="titulo"
+            >
+              Pensamentos e opniões sempre com respeito!
+            </Typography>
+          </Box>
+          <Box display="flex" justifyContent="center"  className="bnthome">
+            <Box marginRight={1}>
+            <ModalPostagem/> 
+            </Box>
+            <Link to='/postagem' className='text-decorator-none'>
+            <Button className="btnpostagem">Ver Postagens</Button>
+            </Link>
+          </Box>  
+        </Grid>
+        {/* <Grid alignItems="center" item xs={6}>
           <Box paddingX={20}>
             <Typography
               variant="h3"
@@ -68,24 +103,24 @@ function Home() {
             <ModalPostagem/> 
             </Box>
             <Link to='/postagem' className='text-decorator-none'>
-            <Button className="botao">Ver Postagens</Button>
+            <Button className="btnpostagem">Ver Postagens</Button>
             </Link>
           </Box>
-        </Grid>
-        <Grid item xs={6}>
+        </Grid> */}
+        {/* <Grid item xs={6}>
 
           <img
-          src="https://i.imgur.com/WsX3FfU.png"
+          src="https://i.imgur.com/dnbM4zU.png"
           alt=""
-          width="500px"
-          height="500px" 
+          width="100%"
+          height="550px" 
           />
 
-        </Grid>
+        </Grid> */}
         <Grid xs={12} className="postagens">
+        </Grid>
+        </Grid>
         <TabPostagem />
-        </Grid>
-        </Grid>
     </>
   );
 }
