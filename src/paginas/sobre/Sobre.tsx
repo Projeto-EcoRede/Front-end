@@ -49,7 +49,7 @@ function Sobre(){
                     Qualquer dúvida entre em contato conosco:
                 </p>
                 </Grid>
-            <Grid className="display">
+            <Grid className="display2">
             
             <Box display="flex" alignItems="center" justifyContent="center">
                
