@@ -44,7 +44,7 @@ function Sobre(){
                 </Box>
             <Box className='logo'></Box>
             </Grid>
-            <Grid className='gridTextoCont'>
+            {/* <Grid className='gridTextoCont'>
             <p className='textocontato'>
                     Qualquer dúvida entre em contato conosco:
                 </p>
@@ -64,7 +64,7 @@ function Sobre(){
                             </a> 
                         </Box>
 
-            </Grid>
+            </Grid> */}
         </Grid>
 
         )
