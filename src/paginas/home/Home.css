@@ -1,5 +1,5 @@
 .caixa{
-    background-image: url(https://i.imgur.com/2m766lw.jpg);
+    background-image: url(https://i.imgur.com/osvHPJp.jpg);
     background-repeat: no-repeat;
     width: 100% !important;
     height: 70vh;
@@ -12,7 +12,7 @@
 }
 
 .titulo{
-    color: #fff !important;
+    color: rgb(237, 244, 248) !important;
    font-weight: bold !important;
    margin-bottom: 10px;
 
