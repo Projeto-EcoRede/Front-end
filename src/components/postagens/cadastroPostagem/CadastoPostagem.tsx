@@ -137,11 +137,10 @@ function CadastroPostagem() {
         history('/postagem')
     }
 
-    return (
-        <Grid>        
-        <Container className="topo">
+    return (   
+        <Container  maxWidth="sm" className="topo">
             <form onSubmit={onSubmit} className='formpostagem'>
-                <Typography variant="h3" color="textSecondary" component="h2" align="center" >Nova postagem</Typography>
+                <Typography variant="h3" component="h2" >Nova postagem</Typography>
 
                 <TextField
                     value={postagem.titulo}
@@ -199,7 +198,6 @@ function CadastroPostagem() {
                 </FormControl>
             </form>
         </Container>
-        </Grid>
     )
 }
 

@@ -7,8 +7,6 @@ body{
     background-size: cover;
     background-position: center;
     border-top: inset;
-    align-items: center;
-    justify-content: center;
 
 }
 .formpostagem{
@@ -43,8 +41,6 @@ body{
     color: #3d8f03 !important;
 
 }
-.MuiContainer-root{
-    padding-bottom: 30px;
-}
+
 
 

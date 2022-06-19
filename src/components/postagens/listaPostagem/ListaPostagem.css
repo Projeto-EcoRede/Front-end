@@ -1,6 +1,7 @@
 .text-decorator-none {
     text-decoration: none;
 }
+
 .img-postagem{
     max-width: 250px !important;
     max-height: 250px !important;
@@ -56,8 +57,9 @@
 
 .boxpostagem {
     max-width: 800px !important;
-    max-height: 500px;
+    max-height: 800px;
     border-radius: 20px;
+    margin-left: 8% !important;
 }
 
 .btnpost {

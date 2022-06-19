@@ -5,16 +5,17 @@
     text-decoration: none;
 }
 .cardtema{
-    width: 600px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.595);
+    width: 600px !important;
+    background-color: rgba(255, 255, 255, 0.595) !important;
     color: black;
     font-weight: bold !important;
     border: 1px solid rgb(0, 0, 0) !important;
-    padding: 20px;
-    border-radius: 08px;
+    padding: 20px !important;
+    border-radius: 08px !important; 
     text-align: center;
     margin-top: 100px !important;
+    margin-left: 30% !important;
+
 }
 .btncadtema{
     background-color: #3d8f03af !important;

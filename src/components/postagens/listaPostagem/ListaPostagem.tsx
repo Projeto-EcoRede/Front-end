@@ -75,7 +75,7 @@ function ListaPostagem() {
       {
         postagens.map(postagem => (
           <Grid className='gridprincipal'>
-            <Box m={2} className="boxpostagem" >
+            <Box className="boxpostagem" >
             <Card variant="outlined" className="postagem">
               <CardContent>
                 <Typography  className="titulopost">
