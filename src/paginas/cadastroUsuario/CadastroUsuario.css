@@ -1,9 +1,11 @@
 .imagem2{
-    background-image: url(https://i.imgur.com/esMgnw8.jpg) !important;
-    background-repeat: no-repeat!;
-    width: 100%;
+    background-image: url(https://i.imgur.com/2m766lw.jpg);
+    background-repeat: no-repeat;
+    width: 100% !important;
     height: 100vh;
     background-size: cover;
+    align-items: center;
+    text-align: center;
     background-position: center;
 }
 
@@ -31,10 +33,8 @@
     border: 1px solid rgb(0, 0, 0) !important;
 }
 .bntcadastraruser:hover{
-    font-weight: bold; 
     background-color: #3d8f03 !important;
-    padding: 10px 20px;
-    font-size: 15px;
+   
 }
 .btnCancelar{
     font-weight: bold !important;
@@ -43,11 +43,7 @@
 
 
 }
-.btnCancelar:hover{
-    font-weight: bold !important;
-    border: 1px solid rgb(0, 0, 0) !important;
+.btnCancelar:hover{ 
     background-color: red !important;
-    padding: 10px 20px;
-    font-size: 15px;
 
 }

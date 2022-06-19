@@ -1,8 +1,8 @@
-.caixa{
+.caixa {
     background-image: url(https://i.imgur.com/2m766lw.jpg);
     background-repeat: no-repeat;
     width: 100% !important;
-    height: 70vh;
+    height: 100vh !important;
     background-size: cover;
     align-items: center;
     text-align: center;
@@ -11,38 +11,60 @@
 
 }
 
-.titulo{
+.titulo {
     color: #fff !important;
-   font-weight: bold !important;
-   margin-bottom: 10px;
-
-
-
+    font-weight: bold !important;
+    margin-bottom: 10px;
 }
-.bnthome{
+
+.bnthome {
     padding: 20px;
 }
 
-.btnpostagem{
-   
-    background-color: #3d8f03af !important;   
+.btnpostagem {
+
+    background-color: #3d8f03af !important;
     color: white !important;
     font-weight: bold !important;
     border: 1px solid rgb(0, 0, 0) !important;
 }
-.btnpostagem:hover{
-    
-        font-weight: bold; 
-        box-shadow: inset 0 0 0 3em #3d8f03 !important;
-        padding: 10px 20px;
-        font-size: 15px;
+
+.btnpostagem:hover {
+
+    box-shadow: inset 0 0 0 3em #3d8f03 !important;
+
+
 }
-.text-decorator-none{
+
+.text-decorator-none {
     text-decoration: none !important;
 }
-.logooficial{
+
+.logooficial {
     height: 150px;
-    width: 100%;
-    background-size: contain;
+    width: 600px !important;
+    background-size: cover;
 }
+
+.logo{
+    background-image: url(https://i.imgur.com/CKzhFwT.png) !important; ;
+    background-repeat: no-repeat!important; 
+    width: 600px!important; 
+    height: 400px!important; 
+    justify-content: center!important; 
+    align-items: center !important;    background-size: contain !important;
+
+}
+
+.sobre{
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.textosobre{
+    text-align: center !important; 
+    font-size: 20px !important;
+
+}
+
 

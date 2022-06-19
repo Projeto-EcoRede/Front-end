@@ -92,8 +92,7 @@ function Login() {
         return (
           <Grid container direction="row" justifyContent="center" 
           alignItems="center" className="fundo">
-            <Grid xs={6}>
-              <Box paddingX={20}>
+              <Box className='formlogin'>
                 <form onSubmit={onSubmit}>
                   <Typography
                     variant="h3"
@@ -110,7 +109,6 @@ function Login() {
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id="usuario"
                     label="usuário"
-                    variant="outlined"
                     name="usuario"
                     margin="normal"
                     fullWidth
@@ -120,7 +118,6 @@ function Login() {
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id="senha"
                     label="senha"
-                    variant="outlined"
                     name="senha"
                     margin="normal"
                     type="password"
@@ -150,8 +147,6 @@ function Login() {
                   </Link>
                 </Box>
               </Box>
-            </Grid>
-            <Grid xs={6} className="imagem"></Grid>
           </Grid>
         );
       }

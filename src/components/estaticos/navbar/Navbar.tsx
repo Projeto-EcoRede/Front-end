@@ -59,57 +59,49 @@ function Navbar() {
       <AppBar position="static" >
         <Toolbar className="navbar">
         <Link to="/home" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+              <Box mx={1} className='cursor  navbarcolor'>
               <Typography variant="h5" className="bold">
                   Home
                 </Typography>
               </Box>
-            </Link>
-            <Link to="/postagem" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+            </Link>           
+            <Link to="/feed" className="text-decorator-none">
+              <Box mx={1} className='cursor navbarcolor'>
               <Typography variant="h5" className="bold">
-                  Postagens
+                 Feed
                 </Typography>
               </Box>
             </Link>
             <Link to="/tema" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+              <Box mx={1} className='cursor  navbarcolor'>
               <Typography variant="h5" className="bold">
                   Temas
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioTema" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+              <Box mx={1} className='cursor  navbarcolor'>
               <Typography variant="h5" className="bold">
                   Cadastrar Tema
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioPostagem" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+              <Box mx={1} className='cursor navbarcolor'>
               <Typography variant="h5" className="bold">
                   Cadastrar Postagem
                 </Typography>
               </Box>
             </Link>
             <Link to="/sobre" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
+              <Box mx={1} className='cursor navbarcolor'>
               <Typography variant="h5" className="bold">
                   Sobre Nós
                 </Typography>
               </Box>
             </Link>
-
-            <Link to="/feed" className="text-decorator-none">
-              <Box mx={1} className='cursor'>
-              <Typography variant="h5" className="bold">
-                 Feed
-                </Typography>
-              </Box>
-            </Link>
-            <Box mx={1} className='cursor' onClick={goLogout}>
-            <Typography variant="h5" className="bold">
+            <Box mx={1} className='cursor navbarcolor' onClick={goLogout}>
+            <Typography variant="h5" className="bold ">
               Logout
               </Typography>
             </Box>

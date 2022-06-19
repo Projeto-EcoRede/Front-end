@@ -138,10 +138,10 @@ function CadastroPostagem() {
     }
 
     return (
-        <Grid className="body">        
-        <Container maxWidth="sm" className="topo">
+        <Grid>        
+        <Container className="topo">
             <form onSubmit={onSubmit} className='formpostagem'>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
+                <Typography variant="h3" color="textSecondary" component="h2" align="center" >Nova postagem</Typography>
 
                 <TextField
                     value={postagem.titulo}

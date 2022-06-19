@@ -14,10 +14,12 @@
     color: black;
     border: 1px solid rgb(0, 0, 0) !important;
     border-radius: 08px;
+    margin-top: 50px !important;
 
 }
 .MuiCardContent-root{
     padding: 15px 50px !important;
+    
 }
 .titulopost{
     margin-bottom: 5px !important;
@@ -42,8 +44,6 @@
     font-weight: bold !important;
     border: 1px solid rgb(0, 0, 0) !important;
     background-color: red !important;
-    padding: 10px 20px;
-    font-size: 15px;
     color: white !important;
 
 
@@ -55,8 +55,8 @@
 }
 
 .boxpostagem {
-    max-width: 600px;
-    max-height: 700px;
+    max-width: 800px !important;
+    max-height: 500px;
     border-radius: 20px;
 }
 
@@ -71,6 +71,4 @@
 .btnpost:hover {
     font-weight: bold;
     box-shadow: inset 0 0 0 3em #3d8f03 !important;
-    padding: 10px 20px;
-    font-size: 15px;
 }

@@ -9,6 +9,8 @@
     padding: 20px;
     border-radius: 08px;
     text-align: center;
+    margin-top: 100px !important;
+
 }
 .finalizaTema{
     background-color: #3d8f03af !important;
@@ -20,6 +22,4 @@
 .finalizaTema:hover{
     font-weight: bold; 
     background-color: #3d8f03 !important;
-    padding: 10px 20px;
-    font-size: 15px;
 }

@@ -39,6 +39,8 @@
     padding: 20px;
     border-radius: 08px;
     text-align: center;
+    margin-top: 100px !important;
+    margin-right: 50px !important;
 }
 .card-imagem{
    max-width: 150px;

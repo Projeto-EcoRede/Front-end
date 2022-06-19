@@ -107,7 +107,7 @@ function CadastroTema() {
     }
   
     return (
-        <Grid className="topo">
+        <Grid>
 <Container maxWidth="sm" >
             <form onSubmit={onSubmit} className='formTema'>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>

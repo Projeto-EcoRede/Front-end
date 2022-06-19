@@ -1,10 +1,20 @@
+.boxprincipallistatemas{
+    align-items: center;
+}
 .text-decorator-none{
     text-decoration: none;
 }
 .cardtema{
-    max-width: 600px;
+    width: 600px;
     border-radius: 20px;
-
+    background-color: rgba(255, 255, 255, 0.595);
+    color: black;
+    font-weight: bold !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    padding: 20px;
+    border-radius: 08px;
+    text-align: center;
+    margin-top: 100px !important;
 }
 .btncadtema{
     background-color: #3d8f03af !important;
@@ -13,18 +23,13 @@
     border: 1px solid rgb(0, 0, 0) !important;
 }
 .btncadtema:hover{
-    font-weight: bold;
     box-shadow: inset 0 0 0 3em #3d8f03 !important;
-    padding: 10px 20px;
-    font-size: 15px;
+  
+
 }
 .btndeltema:hover{
-    font-weight: bold !important;
-    border: 1px solid rgb(0, 0, 0) !important;
     background-color: red !important;
-    padding: 10px 20px;
-    font-size: 15px;
-    color: white !important;
+
 }
 .btndeltema{
     font-weight: bold !important;

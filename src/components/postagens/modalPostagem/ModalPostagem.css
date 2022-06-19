@@ -8,11 +8,14 @@ padding: 6px;
 .btnModal:hover{
     font-weight: bold; 
     box-shadow: inset 0 0 0 3em #3d8f03 !important;
-    padding: 10px 20px;
-    font-size: 15px;
 }
 .MuiButton-outlined{
     padding: 6px 15px !important;
    
 
+}
+.makeStyles-paper-41{
+    width: 500px !important;
+    height: 700px !important;
+    padding: 0 !important;
 }
