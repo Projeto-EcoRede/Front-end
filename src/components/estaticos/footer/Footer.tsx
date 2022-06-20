@@ -16,7 +16,7 @@ function Footer() {
         var footerComponent;
         if(token !== ""){
             footerComponent=
-            <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid className='gridPrinFooter' container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
                     <Box className='box1'>
                     <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
