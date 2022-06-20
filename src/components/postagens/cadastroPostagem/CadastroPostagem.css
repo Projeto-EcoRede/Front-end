@@ -3,10 +3,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% !important;
-    min-height: 100vh !important;
+    min-height: 105vh !important;
     max-height: 100% !important;
     border-top: inset;
-    justify-content: center;
+    justify-content: center !important;
 
 }
 .formpostagem{

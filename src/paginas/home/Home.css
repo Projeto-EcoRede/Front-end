@@ -3,10 +3,10 @@
     background-repeat: no-repeat;
     width: 100% !important;
     height: 105vh !important;
-    background-size: cover;
-    align-items: center;
-    text-align: center;
-    background-position: center;
+    background-size: cover !important;
+    align-items: center !important;
+    text-align: center !important;
+    background-position: center !important;
 
 
 }
