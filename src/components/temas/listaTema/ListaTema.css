@@ -41,3 +41,8 @@
 .MuiTypography-h5{
     margin-bottom: 20px !important;
 }
+.tituloTema{
+    margin-bottom: 5px !important;
+    color: black !important;
+    font-size: 20px !important;
+}

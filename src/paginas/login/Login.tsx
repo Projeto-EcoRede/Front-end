@@ -108,7 +108,7 @@ function Login() {
                     value={userLogin.usuario}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id="usuario"
-                    label="usuário"
+                    label="Usuário"
                     name="usuario"
                     margin="normal"
                     fullWidth
@@ -117,7 +117,7 @@ function Login() {
                     value={userLogin.senha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id="senha"
-                    label="senha"
+                    label="Senha"
                     name="senha"
                     margin="normal"
                     type="password"

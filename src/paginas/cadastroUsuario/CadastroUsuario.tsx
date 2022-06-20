@@ -93,7 +93,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="nome"
-              label="nome e sobrenome"
+              label="Nome e Sobrenome"
               name="nome"
               margin="normal"
               fullWidth
@@ -103,7 +103,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
-              label="usuario"
+              label="Usuário"
               name="usuario"
               margin="normal"
               fullWidth
@@ -113,7 +113,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               value={user.foto}
               id="foto"
-              label="link da foto"
+              label="Link Foto de Perfil"
               name="foto"
               margin="normal"
               fullWidth
@@ -122,7 +122,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="senha"
+              label="Senha"
               name="senha"
               margin="normal"
               type="password"
@@ -135,7 +135,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                 confirmarSenhaHandle(e)
               }
               id="confirmarSenha"
-              label="confirmarSenha"
+              label="Confirmar Senha"
               name="confirmarSenha"
               margin="normal"
               type="password"

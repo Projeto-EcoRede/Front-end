@@ -52,7 +52,7 @@ function ListaTema() {
                     <Box m={2}  >
                         <Card variant="outlined" className='cardtema'>
                             <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
+                                <Typography className='tituloTema' gutterBottom>
                                     Tema
                                 </Typography>
                                 <Typography variant="h5" component="h2">

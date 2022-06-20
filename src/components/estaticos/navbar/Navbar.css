@@ -10,7 +10,7 @@
 }
 
 .bold{
-    color: rgba(255, 254, 254, 0.7) !important;
+    color: rgb(255, 254, 254) !important;
     margin-top: 20px;
 }
 .bold:hover{

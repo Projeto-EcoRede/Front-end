@@ -140,8 +140,7 @@ function CadastroPostagem() {
     return (   
         <Container  maxWidth="sm" className="topo">
             <form onSubmit={onSubmit} className='formpostagem'>
-                <Typography variant="h3" component="h2" >Nova postagem</Typography>
-
+                <Typography variant="h3" component="h2" >Nova Postagem</Typography>
                 <TextField
                     value={postagem.titulo}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
