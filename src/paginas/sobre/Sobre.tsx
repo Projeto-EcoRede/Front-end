@@ -71,7 +71,7 @@ function Sobre(){
             </Box>     
             <Box className='boxDevs'>
             <h4>José Lumbo</h4>
-            <img className='fotodev' src="https://i.imgur.com/4qhxevP.jpg" alt="" />
+            <img className='fotodev' src="https://i.imgur.com/LTotdhO.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
             <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/jose-lumbo-464b71220/">LinkedIn</a> <hr />
             <a className='text-decorator-none linkdev' href="https://github.com/joseLumbo">GitHub</a>
