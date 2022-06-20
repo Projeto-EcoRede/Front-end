@@ -56,39 +56,39 @@ function Sobre(){
             <a className='text-decorator-none linkdev' href="https://github.com/RafaelRodrigues92">GitHub</a>
             </Box>     
             <Box className='boxDevs'>
-            <h4>Rafael Dias Rodrigues</h4>
-            <img className='fotodev' src="https://i.imgur.com/CXQzy3I.jpg" alt="" />
+            <h4>Mauricio Ferreira</h4>
+            <img className='fotodev' src="https://i.imgur.com/9FNmUlL.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
-            <a className='text-decorator-none linkdev' href="#">LinkedIn</a> <hr />
-            <a className='text-decorator-none linkdev' href="#">GitHub</a>
+            <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/mauricio-oliveira-ferreira-5a703619b/">LinkedIn</a> <hr />
+            <a className='text-decorator-none linkdev' href="https://github.com/MauricioBRA">GitHub</a>
             </Box>     
             <Box className='boxDevs'>
-            <h4>Rafael Dias Rodrigues</h4>
-            <img className='fotodev' src="https://i.imgur.com/CXQzy3I.jpg" alt="" />
-            <p>Desenvoldedor Full Stack</p>
-            <a className='text-decorator-none linkdev' href="#">LinkedIn</a> <hr />
-            <a className='text-decorator-none linkdev' href="#">GitHub</a>
+            <h4>Jéssica Silva</h4>
+            <img className='fotodev' src="https://i.imgur.com/FgMzhtW.jpg" alt="" />
+            <p>Desenvoldedora Full Stack</p>
+            <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/j%C3%A9ssica-b-da-silva-66793048/">LinkedIn</a> <hr />
+            <a className='text-decorator-none linkdev' href="https://github.com/jessbslee">GitHub</a>
             </Box>     
             <Box className='boxDevs'>
-            <h4>Rafael Dias Rodrigues</h4>
-            <img className='fotodev' src="https://i.imgur.com/CXQzy3I.jpg" alt="" />
+            <h4>José Lumbo</h4>
+            <img className='fotodev' src="https://i.imgur.com/4qhxevP.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
-            <a className='text-decorator-none linkdev' href="#">LinkedIn</a> <hr />
-            <a className='text-decorator-none linkdev' href="#">GitHub</a>
+            <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/jose-lumbo-464b71220/">LinkedIn</a> <hr />
+            <a className='text-decorator-none linkdev' href="https://github.com/joseLumbo">GitHub</a>
             </Box>     
             <Box className='boxDevs'>
-            <h4>Rafael Dias Rodrigues</h4>
-            <img className='fotodev' src="https://i.imgur.com/CXQzy3I.jpg" alt="" />
+            <h4>Felipe Belluco</h4>
+            <img className='fotodev' src="https://i.imgur.com/HzLcrHL.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
-            <a className='text-decorator-none linkdev' href="#">LinkedIn</a> <hr />
-            <a className='text-decorator-none linkdev' href="#">GitHub</a>
+            <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/febelluco/">LinkedIn</a> <hr />
+            <a className='text-decorator-none linkdev' href="https://github.com/FeBelluco">GitHub</a>
             </Box>  
             <Box className='boxDevs'>
-            <h4>Rafael Dias Rodrigues</h4>
-            <img className='fotodev' src="https://i.imgur.com/CXQzy3I.jpg" alt="" />
-            <p>Desenvoldedor Full Stack</p>
-            <a className='text-decorator-none linkdev' href="#">LinkedIn</a> <hr />
-            <a className='text-decorator-none linkdev' href="#">GitHub</a>
+            <h4>Ariane Lima</h4>
+            <img className='fotodev' src="https://i.imgur.com/YzMBm57.jpg" alt="" />
+            <p>Desenvoldedora Full Stack</p>
+            <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/ariane-alves-lima-57744a20b/">LinkedIn</a> <hr />
+            <a className='text-decorator-none linkdev' href="https://github.com/ariiialima">GitHub</a>
             </Box>  
             </Grid>          
           </Grid> 
