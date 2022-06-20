@@ -75,11 +75,11 @@ function Home() {
             <Button className="btnpostagem">Ver Postagens</Button>
             </Link>
           </Box>  
-          <Box className='sobre' >
-                    <p className='textosobre'>Uma Rede Social desenvolvida por alunes da Generation Brasil, onde o foco é conectar e incentivar a interação entre as pessoas, abordando assuntos com a temática ecológica. 
-                    Aqui a intenção é promover, debater, e até denunciar sobre as mais variadas situações que encontramos em nossa comunidade.
-                    As pessoas terão acesso ao que sua região oferece, pois a nossa rede proporciona o espaço perfeito para conectar os moradores com os profissionais de reciclagem e de áreas correlatas. </p>
-                </Box>                
+          <Box className='sobreHome' >
+                    <p className='textosobreHome'>Uma Rede Social desenvolvida por alunes da Generation Brasil, onde o foco é conectar e incentivar a interação entre as pessoas, abordando assuntos com a temática ecológica.</p>
+                <p>Aqui a intenção é promover, debater, e até denunciar sobre as mais variadas situações que encontramos em nossa comunidade.
+                    As pessoas terão acesso ao que sua região oferece, pois a nossa rede proporciona o espaço perfeito para conectar os moradores com os profissionais de reciclagem e de áreas correlatas.</p>
+                </Box>              
         </Grid>    
         
         </Grid>

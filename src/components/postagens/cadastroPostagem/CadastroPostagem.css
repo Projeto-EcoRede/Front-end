@@ -1,12 +1,12 @@
 body{
     background-image: url(https://i.imgur.com/9AUOqcw.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100% !important;
     min-height: 100vh !important;
     max-height: 100% !important;
-    background-size: cover;
-    background-position: center;
     border-top: inset;
+    justify-content: center;
 
 }
 .formpostagem{
@@ -17,9 +17,9 @@ body{
     padding: 20px;
     border-radius: 08px;
     text-align: center;
-    margin-top: 100px !important;
-    max-height: 600px;
-    max-width: 500px;
+    margin-top: 50px !important;
+    max-height: 500px;
+    max-width: 400px;
 }
 .finalizaPost{
     background-color: #3d8f03af !important;

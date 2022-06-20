@@ -60,48 +60,48 @@ function Navbar() {
         <Toolbar className="navbar">
         <Link to="/home" className="text-decorator-none">
               <Box mx={1} className='cursor  navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                   Home
                 </Typography>
               </Box>
             </Link>           
             <Link to="/feed" className="text-decorator-none">
               <Box mx={1} className='cursor navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                  Feed
                 </Typography>
               </Box>
             </Link>
             <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className='cursor  navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                   Temas
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioTema" className="text-decorator-none">
               <Box mx={1} className='cursor  navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                   Cadastrar Tema
                 </Typography>
               </Box>
             </Link>
             <Link to="/formularioPostagem" className="text-decorator-none">
               <Box mx={1} className='cursor navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                   Cadastrar Postagem
                 </Typography>
               </Box>
             </Link>
             <Link to="/sobre" className="text-decorator-none">
               <Box mx={1} className='cursor navbarcolor'>
-              <Typography variant="h5" className="bold">
+              <Typography variant="h6" className="bold">
                   Sobre Nós
                 </Typography>
               </Box>
             </Link>
             <Box mx={1} className='cursor navbarcolor' onClick={goLogout}>
-            <Typography variant="h5" className="bold ">
+            <Typography variant="h6" className="bold ">
               Logout
               </Typography>
             </Box>

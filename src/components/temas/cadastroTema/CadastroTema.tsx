@@ -110,9 +110,9 @@ function CadastroTema() {
         <Grid>
 <Container maxWidth="sm" >
             <form onSubmit={onSubmit} className='formTema'>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.topico} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="topico" label="topico"  name="topico" margin="normal" fullWidth />
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" name="descricao" margin="normal" fullWidth />
+                <Typography variant="h3" color="textPrimary" component="h1" align="center" >Cadastro Tema</Typography>
+                <TextField value={tema.topico} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="topico" label="Tópico"  name="topico" margin="normal" fullWidth />
+                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="Descrição" name="descricao" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" className='finalizaTema'>
                     Finalizar
                 </Button>

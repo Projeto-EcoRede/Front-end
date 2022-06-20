@@ -1,10 +1,15 @@
 .text-decorator-none {
     text-decoration: none;
 }
+.gridprincipal{
+    justify-content: center !important;
+    text-align: -webkit-center;
+
+}
 
 .img-postagem{
-    max-width: 250px !important;
-    max-height: 250px !important;
+    max-width: 350px !important;
+    max-height: 350px !important;
 }
 
 .postagem {
@@ -16,10 +21,12 @@
     border: 1px solid rgb(0, 0, 0) !important;
     border-radius: 08px;
     margin-top: 50px !important;
+    margin-bottom: 15px !important;
+    margin-left: 15px !important;
 
 }
 .MuiCardContent-root{
-    padding: 15px 50px !important;
+    padding: 15px 30px !important;
     
 }
 .titulopost{
@@ -56,10 +63,9 @@
 }
 
 .boxpostagem {
-    max-width: 800px !important;
-    max-height: 800px;
+    max-width: 600px !important;
+    max-height: 600px;
     border-radius: 20px;
-    margin-left: 8% !important;
 }
 
 .btnpost {

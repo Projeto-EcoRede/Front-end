@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 import { useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem'
@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/token/tokensReducer';
 import { toast } from 'react-toastify';
 import Postagem from '../../models/Postagem'
+import LinksUteis from '../../components/postagens/linksUteis/LinksUteis'
 
 export default function Feed() {
   const [feed, setFeed] = useState<Postagem[]>([])
@@ -45,12 +46,15 @@ export default function Feed() {
     }, [feed.length])
   return (
     <>    
-    <Grid container>
+    <Grid container className='gridprincFeed'>
         <Grid item md={3} className='perfiluser'>
           <PerfilUsuario />
         </Grid>
-        <Grid item md={9}>
+        <Grid item md={6} className='listapostfeed'>
             <ListaPostagem />
+        </Grid>
+        <Grid item md={3} className="boxlinkuteis">
+            <LinksUteis />
         </Grid>
     </Grid>
     </>

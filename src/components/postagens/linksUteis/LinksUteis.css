@@ -1,0 +1,34 @@
+.img-links{
+    padding: 15px !important;
+    max-width: 200px !important;
+    max-height: 150px !important;
+    
+}
+.card-prin-links{
+    background-color: rgba(255, 255, 255, 0.595) !important;
+    color: black;
+    border: 1px solid rgb(0, 0, 0) !important;
+    border-radius: 08px;
+    text-align: center !important;
+    margin-right: 15px !important;
+    margin-top: 100px !important;
+    margin-left: 50px !important;
+    margin-bottom: 15px !important;
+    padding: 5px !important;
+
+
+}
+
+.text-decorator-none{
+    text-decoration: none !important;
+    
+}
+.link-util{
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.link-util:hover{
+    background-color: rgba(0, 0, 0, 0.204);
+
+}

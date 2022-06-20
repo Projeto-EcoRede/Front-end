@@ -1,6 +1,4 @@
-.topo{
-    margin-top: 100px;
-}
+
 .formTema{
     background-color: rgba(255, 255, 255, 0.595);
     color: black;
@@ -9,7 +7,9 @@
     padding: 20px;
     border-radius: 08px;
     text-align: center;
-    margin-top: 100px !important;
+    margin-top: 50px !important;
+    max-height: 500px;
+    max-width: 400px;
 
 }
 .finalizaTema{

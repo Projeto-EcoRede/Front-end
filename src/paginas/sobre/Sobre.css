@@ -1,54 +1,62 @@
-.css-vj1n65-MuiGrid-root{
-    justify-content: center !important;
-    align-items: center !important;
-    margin: auto !important;
-    width: 100% !important;
+.displaySobre{
+    
     display: flex !important;
     flex-wrap: wrap !important;
+    justify-content: center;
 }
 
 
-.logo{
-    background-image: url(https://i.imgur.com/CKzhFwT.png) !important; ;
+.logoSobre{
     background-repeat: no-repeat!important; 
-    width: 600px!important; 
-    height: 400px!important; 
+    width: 300px!important; 
+    height: 250px!important; 
     justify-content: center!important; 
     align-items: center !important;    background-size: contain !important;
 
 }
-
-.sobre{
-
-    width: 100% !important;
-    display: flex;
-    flex-wrap: wrap;
-
+.gridprinSobre{
+    justify-content: center !important;
+    text-align: center;
+    align-items: center !important;
 }
 
 .textosobre{
-    width: 600px !important; 
-    padding: 20px !important; 
-    background-color: #3d8f03af !important;
-    text-align: justify !important; 
-    font-size: 20px;
-    color: white !important;
+
+    width: 500px !important;
+    text-align: center !important; 
+    color: black !important;
     border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    align-self: center !important;
+    font-size: 18px !important;
+    background-color: rgba(255, 255, 255, 0.609) !important;
+
 
 }
-.textocontato{
-
-   
-    font-size: 20px;
+.linkdev{
+    color: black !important;
+    font-weight: bold !important;  
 }
-.gridTextoCont{
+.linkdev:hover{
+    background-color: rgba(0, 0, 0, 0.204);
+
+}
+.boxDevs{
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.609) !important;
+    color: black;
+    border: 1px solid rgb(0, 0, 0) !important;
+    border-radius: 08px;
+    padding: 10px !important;
+    margin: 10px;
 }
-.display2{
-    display: flex !important;
-    flex-direction: row !important;
+.fotodev{
+    width: 100px !important;
 }
-.redes{
-    height: 60px;
-    margin: 0 20px;
-}
+
+
+
+

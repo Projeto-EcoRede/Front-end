@@ -145,20 +145,20 @@ function CadastroPostagem() {
                 <TextField
                     value={postagem.titulo}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="titulo" label="titulo"
+                    id="titulo" label="Título"
                     name="titulo" margin="normal" fullWidth
                 />
 
                 <TextField
                     value={postagem.texto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="texto" label="texto" name="texto"
+                    id="texto" label="Texto" name="texto"
                     margin="normal" fullWidth
                 />
                 <TextField
                     value={postagem.midia}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-                    id="midia" label="url midia" name="midia"
+                    id="midia" label="Link Mídia" name="midia"
                     margin="normal" fullWidth />
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Regiões</FormLabel>
