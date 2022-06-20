@@ -1,19 +1,22 @@
 .box1{
     height: 120px;
     background-color: #3d8f03;
+    color: rgb(255, 255, 255) !important;
+
 }
 
 .box2{
     background-color: #3d8f03;
     height: 60px !important;
+    color: rgb(255, 255, 255) !important;
+
 
 }
-.textos{
-    color: white !important;
-}
+
 .redes{
    font-size: 60px;
    color:  rgba(255, 255, 255, 0.609) !important;
+   margin-right: 15px !important;
 }
 .redes:hover{
    color: white !important;

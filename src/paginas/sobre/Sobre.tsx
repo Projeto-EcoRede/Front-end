@@ -57,7 +57,7 @@ function Sobre(){
             </Box>     
             <Box className='boxDevs'>
             <h4>Mauricio Ferreira</h4>
-            <img className='fotodev' src="https://i.imgur.com/9FNmUlL.jpg" alt="" />
+            <img className='fotodev' src="https://i.imgur.com/xmhZQTy.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
             <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/mauricio-oliveira-ferreira-5a703619b/">LinkedIn</a> <hr />
             <a className='text-decorator-none linkdev' href="https://github.com/MauricioBRA">GitHub</a>
@@ -78,7 +78,7 @@ function Sobre(){
             </Box>     
             <Box className='boxDevs'>
             <h4>Felipe Belluco</h4>
-            <img className='fotodev' src="https://i.imgur.com/HzLcrHL.jpg" alt="" />
+            <img className='fotodev' src="https://i.imgur.com/4paPkCA.jpg" alt="" />
             <p>Desenvoldedor Full Stack</p>
             <a className='text-decorator-none linkdev' href="https://www.linkedin.com/in/febelluco/">LinkedIn</a> <hr />
             <a className='text-decorator-none linkdev' href="https://github.com/FeBelluco">GitHub</a>
