@@ -47,7 +47,7 @@ function ListaTema() {
         <>
             {
                 tema.map(tema => (
-                    <Grid>
+                    <Grid className='gridPrinListTemas'>
 
                     <Box m={2}  >
                         <Card variant="outlined" className='cardtema'>
