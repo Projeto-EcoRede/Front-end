@@ -39,7 +39,7 @@ function ListaPostagem() {
         pauseOnHover: false,
         draggable: false,
         theme: "colored",
-        progress: "undefined"
+        progress: undefined,
       })     
         history("/login")
 

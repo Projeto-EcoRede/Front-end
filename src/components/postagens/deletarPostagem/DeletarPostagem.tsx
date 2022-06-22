@@ -34,7 +34,7 @@ function DeletarPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
               });
             history("/login")
 
@@ -73,7 +73,7 @@ function DeletarPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
               });    
         } catch (error) {
             toast.error('Erro ao deletar postagem!', {
@@ -84,7 +84,7 @@ function DeletarPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
               });
             }
 

@@ -19,14 +19,14 @@ function Home() {
     useEffect(() => {
         if (token == "") {
           toast.error('Você precisa estar logado!', {
-              position: "top-center",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: "undefined"
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
             })
             history("/login")
     
@@ -68,7 +68,7 @@ function Home() {
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center"  className="bnthome">
-            <Box marginRight={1}>
+            <Box marginRight={1} className='botaonovapostagem'>
             <ModalPostagem/> 
             </Box>
             <Link to='/postagem' className='text-decorator-none'>

@@ -23,8 +23,8 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token == "") {
-            toast.error("Você precisa está logado", {
-                position: "top-right",
+            toast.error('Você precisa estar logado!', {
+                position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -71,8 +71,8 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            toast.success("Tema atualizado com sucesso", {
-                position: "top-right",
+            toast.success("Tema atualizado com sucesso!", {
+                position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -87,8 +87,8 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            toast.success("Tema cadastrado com sucesso", {
-                position: "top-right",
+            toast.success("Tema cadastrado com sucesso!", {
+                position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,

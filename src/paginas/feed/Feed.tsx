@@ -19,8 +19,8 @@ export default function Feed() {
 
     useEffect(() => {
         if (token == "") {
-            toast.error("Você precisa está logado", {
-                position: "top-right",
+            toast.error("Você precisa estar logado!", {
+                position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,

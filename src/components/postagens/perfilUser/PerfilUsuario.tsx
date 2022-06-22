@@ -32,7 +32,7 @@ function PerfilUsuario() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+            alert("Você precisa estar logado!")
             history("/login")
         }
     }, [token])

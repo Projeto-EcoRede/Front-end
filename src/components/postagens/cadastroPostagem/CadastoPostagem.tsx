@@ -32,7 +32,7 @@ function CadastroPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
             });
             history("/login")
         }
@@ -110,7 +110,7 @@ function CadastroPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
             });
         } else {
 
@@ -127,7 +127,7 @@ function CadastroPostagem() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: "undefined"
+                progress: undefined,
             });
         }
         back()

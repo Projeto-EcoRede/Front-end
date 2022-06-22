@@ -48,27 +48,27 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
 
-        toast.success("Usuário cadastrado com sucesso", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
+        toast.success("Usuário cadastrado com sucesso!", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
         });
     }
     else {
         toast.error("Senha deve ter 8 caracteres. Favor verificar as informações de cadastro.", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
         });
     }
 

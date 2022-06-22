@@ -65,7 +65,7 @@ function Login() {
               await login(`/usuarios/logar`, userLogin, setRespUserLogin)
 
                 toast.success("Usuário logado com sucesso!", {
-                    position: "top-right",
+                    position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -77,14 +77,14 @@ function Login() {
             }
             catch(error){
                 toast.error("Dados do usuário inconsistentes. Erro ao logar!", {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: "colored",
-                    progress: undefined,
+                  position: "top-center",
+                  autoClose: 2000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: false,
+                  draggable: false,
+                  theme: "colored",
+                  progress: undefined,
                 });
             }
         }

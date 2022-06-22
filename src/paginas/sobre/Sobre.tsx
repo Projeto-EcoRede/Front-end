@@ -16,14 +16,14 @@ function Sobre(){
     useEffect(() => {
         if (token == "") {
           toast.error('Você precisa estar logado!', {
-              position: "top-center",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-              theme: "colored",
-              progress: "undefined"
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
             })
             history("/login")
 
