@@ -60,7 +60,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         });
     }
     else {
-        toast.error("Senha deve ter 8 caracteres. Favor verificar as informações de cadastro.", {
+        toast.error("Senha deve ter minimo de 8 caracteres. Favor verificar as informações de cadastro.", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
@@ -122,7 +122,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="Senha minimo de 8 caracteres"
+              label="Senha (minimo de 8 caracteres)"
               name="senha"
               margin="normal"
               type="password"
@@ -135,7 +135,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                 confirmarSenhaHandle(e)
               }
               id="confirmarSenha"
-              label="Confirmar Senha minimo de 8 caracteres"
+              label="Confirmar Senha (minimo de 8 caracteres)"
               name="confirmarSenha"
               margin="normal"
               type="password"
