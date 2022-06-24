@@ -122,7 +122,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
               value={user.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="Senha"
+              label="Senha minimo de 8 caracteres"
               name="senha"
               margin="normal"
               type="password"
@@ -135,7 +135,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                 confirmarSenhaHandle(e)
               }
               id="confirmarSenha"
-              label="Confirmar Senha"
+              label="Confirmar Senha minimo de 8 caracteres"
               name="confirmarSenha"
               margin="normal"
               type="password"
