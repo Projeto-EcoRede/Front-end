@@ -62,6 +62,7 @@
 
 .MuiCardActions-root {
     justify-content: center !important;
+    flex-direction: column;
 }
 
 .boxpostagem {
@@ -69,7 +70,15 @@
     max-height: 600px;
     border-radius: 20px;
 }
+.btnCurtir{
+    font-weight: bold;
+    color: #3d8f03af ;
 
+
+}
+.btnCurtir:hover{
+    color: #3d8f03 !important;
+}
 .btnpost {
     background-color: #3d8f03af !important;
     color: white !important;

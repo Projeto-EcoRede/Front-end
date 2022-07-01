@@ -116,11 +116,13 @@ function ListaPostagem() {
                       </Button>
                     </Box>
                   </Link>
-                  {/* <Box mx={1}>
-                      <Button onClick={() => { curtidas(postagem.id) }} ><ThumbUpIcon color='primary'></ThumbUpIcon></Button>
-                      <Typography style={{ color: 'black' }} align='center' variant="body2" component="p"> {postagem.curtir}</Typography>
-                    </Box> */}
                 </Box>
+                <Box>
+                <Button  onClick={() => { curtidas(postagem.id) }} ><ThumbUpIcon className='btnCurtir' ></ThumbUpIcon></Button>
+                      <Typography> {postagem.curtir}</Typography>
+
+                </Box>
+                
               </CardActions>
             </Card>
           </Box>
